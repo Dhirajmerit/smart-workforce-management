@@ -237,4 +237,4 @@ This project is licensed under the MIT License.
 Developed by YOUR_NAME
 
 GitHub:
-https://github.com/YOUR_USERNAME
+https://github.com/Dhirajmerit
