@@ -1,240 +1,271 @@
-# 🚀 Smart Workforce Management System
+# 🎓 Smart Campus Feedback System
 
-A modern Full Stack Employee & Workforce Management Platform built using **React.js**, **Spring Boot**, and **MySQL**.
-
-This project is designed for:
-- Full Stack Java Developer roles
-- 2026 Placement Preparation
-- Resume & Portfolio Projects
-- Enterprise Application Learning
+A full-stack web application developed to streamline the student feedback process within educational institutions. The system enables students to submit anonymous feedback while allowing administrators and faculty to analyze responses through a centralized dashboard.
 
 ---
 
-# ✨ Features
+## 📌 Overview
 
-## 👨‍💼 Employee Management
-- Add Employees
-- Update Employee Details
-- Delete Employees
-- Search Employees
-- Department Management
-
-## 📊 Dashboard & Analytics
-- Employee Statistics
-- Department-wise Distribution
-- Salary Overview
-- Future AI Analytics Support
-
-## 🔐 Authentication (Planned)
-- JWT Authentication
-- Role-Based Access Control
-- Admin / HR / Employee Roles
-
-## 📅 Attendance & Leave (Planned)
-- Daily Check-In/Check-Out
-- Leave Requests
-- Leave Approval System
-
-## 💰 Payroll System (Planned)
-- Salary Calculation
-- Payslip Generation
-- Payroll Reports
-
-## 📢 Notifications (Planned)
-- Real-time Alerts
-- Email Notifications
-- WebSocket Integration
+The Smart Campus Feedback System digitizes the traditional feedback collection process by providing a secure, centralized, and user-friendly platform. It improves transparency, simplifies data management, and helps institutions make data-driven decisions based on student feedback.
 
 ---
 
-# 🛠️ Tech Stack
+## ✨ Features
 
-## Frontend
+### 👨‍🎓 Student Module
+- Secure Login & Registration
+- Submit Course Feedback
+- Anonymous Feedback Submission
+- View Submission Status
+- User-Friendly Dashboard
+
+### 👨‍🏫 Faculty Module
+- View Feedback Summary
+- Department-wise Analytics
+- Performance Insights
+
+### 👨‍💼 Admin Module
+- Manage Students & Faculty
+- Manage Courses & Departments
+- Generate Feedback Reports
+- Dashboard with Analytics
+- Secure Role-Based Authentication
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
 - React.js
-- React Router
-- Axios
-- Tailwind CSS (Upgradeable)
+- HTML5
+- CSS3
+- JavaScript
 
-## Backend
-- Java Spring Boot
-- Spring Data JPA
+### Backend
+- Java
+- Spring Boot
+- Spring Security
 - REST APIs
-- Hibernate
-- Lombok
 
-## Database
+### Database
 - MySQL
 
-## DevOps & Tools
-- Git & GitHub
-- Docker (Future)
-- AWS Deployment (Future)
+### Tools
+- Git
+- GitHub
+- IntelliJ IDEA
+- VS Code
+- Postman
 
 ---
 
-# 📁 Project Structure
+## 📂 Project Structure
 
-```bash
-smart-workforce-management/
-│
-├── backend/
-│   ├── controller/
-│   ├── service/
-│   ├── repository/
-│   ├── entity/
-│   └── resources/
+```
+Smart-Campus-Feedback-System
 │
 ├── frontend/
 │   ├── src/
-│   │   ├── pages/
-│   │   ├── components/
-│   │   ├── services/
-│   │   └── App.js
+│   ├── public/
+│   └── package.json
 │
-└── README.md
+├── backend/
+│   ├── src/
+│   ├── pom.xml
+│   └── application.properties
+│
+├── database/
+│   └── schema.sql
+│
+├── screenshots/
+│
+├── README.md
+│
+└── .gitignore
 ```
 
 ---
 
-# ⚙️ Installation & Setup
+## 🗄️ Database
 
-# 1️⃣ Clone Repository
+Database: **MySQL**
+
+Main Tables:
+
+- Student
+- Faculty
+- Admin
+- Department
+- Course
+- Feedback
+- User Roles
+
+---
+
+## 🔐 Authentication
+
+The application implements secure authentication using Spring Security with role-based access control.
+
+Available Roles:
+
+- Admin
+- Faculty
+- Student
+
+Each role has access only to the features assigned to it.
+
+---
+
+## 🚀 Installation
+
+### Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/smart-workforce-management.git
+git clone https://github.com/Dhirajmerit/Smart-Campus-Feedback-System.git
 ```
 
----
-
-# 2️⃣ Backend Setup
-
-## Open Backend Folder
+### Backend
 
 ```bash
 cd backend
 ```
 
-## Configure MySQL Database
+Configure MySQL in
 
-Create Database:
-
-```sql
-CREATE DATABASE workforce_db;
+```
+application.properties
 ```
 
-## Update application.properties
-
-```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/workforce_db
-spring.datasource.username=root
-spring.datasource.password=your_password
-```
-
-## Run Spring Boot Application
+Run
 
 ```bash
 mvn spring-boot:run
 ```
 
-Backend runs on:
-
-```bash
-http://localhost:8080
-```
-
 ---
 
-# 3️⃣ Frontend Setup
-
-## Open Frontend Folder
+### Frontend
 
 ```bash
 cd frontend
 ```
 
-## Install Dependencies
+Install dependencies
 
 ```bash
 npm install
 ```
 
-## Start React App
+Run
 
 ```bash
 npm start
 ```
 
-Frontend runs on:
+Application will open at
 
-```bash
+```
 http://localhost:3000
 ```
 
 ---
 
-# 📡 API Endpoints
+## 📊 System Workflow
 
-## Employee APIs
-
-| Method | Endpoint | Description |
-|---|---|---|
-| GET | `/api/employees` | Get all employees |
-| POST | `/api/employees` | Add employee |
-| PUT | `/api/employees/{id}` | Update employee |
-| DELETE | `/api/employees/{id}` | Delete employee |
-
----
-
-# 📷 Future Enhancements
-
-- ✅ JWT Authentication
-- ✅ Attendance Tracking
-- ✅ Payroll Module
-- ✅ Employee Performance Tracking
-- ✅ AI Employee Analytics
-- ✅ Dark Mode UI
-- ✅ Docker Deployment
-- ✅ AWS Hosting
-- ✅ CI/CD Pipeline
+```
+Student Login
+        │
+        ▼
+Submit Feedback
+        │
+        ▼
+Spring Boot REST API
+        │
+        ▼
+MySQL Database
+        │
+        ▼
+Admin Dashboard
+        │
+        ▼
+Reports & Analytics
+```
 
 ---
 
-# 🎯 Learning Outcomes
+## 📷 Screenshots
 
-This project helps in understanding:
-- Full Stack Development
+> Add screenshots in the `screenshots` folder.
+
+Suggested screenshots:
+
+- Login Page
+- Student Dashboard
+- Feedback Form
+- Faculty Dashboard
+- Admin Dashboard
+- Analytics Page
+
+---
+
+## 📈 Future Enhancements
+
+- Email Notifications
+- AI-Based Sentiment Analysis
+- Mobile Responsive Design
+- PDF Report Generation
+- Charts & Data Visualization
+- Export Reports to Excel
+- Multi-Institution Support
+
+---
+
+## 🎯 Learning Outcomes
+
+Through this project, I gained practical experience in:
+
+- Full Stack Web Development
 - REST API Development
-- Spring Boot Architecture
-- React Component Structure
-- Database Integration
+- Spring Boot
+- React.js
+- MySQL Database Design
+- Authentication & Authorization
+- Git & GitHub
+- Software Architecture
 - CRUD Operations
-- Enterprise Application Design
 
 ---
 
-# 📌 Resume Description
+## 🤝 Contributing
 
-> Built a Smart Workforce Management System using React.js, Spring Boot, and MySQL with RESTful APIs, employee management, dashboard analytics, and scalable enterprise architecture.
+Contributions are welcome!
 
----
-
-# 🤝 Contributing
-
-Contributions are welcome.
-
-Fork the repository and create a pull request.
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
 
 ---
 
-# 📜 License
+## 📄 License
 
 This project is licensed under the MIT License.
 
 ---
 
-# 👨‍💻 Author
+## 👨‍💻 Author
 
-Developed by YOUR_NAME
+**Dhiraj Yogesh Patil**
 
-GitHub:
-https://github.com/Dhirajmerit
+B.Tech Computer Science Engineering  
+VIT Bhopal University
+
+📧 Email: dhiraj.patil207@gmail.com
+
+🔗 LinkedIn: https://linkedin.com/in/dhiraj-patil-234169320
+
+💻 GitHub: https://github.com/Dhirajmerit
+
+---
+
+⭐ If you found this project helpful, please consider giving it a star!
